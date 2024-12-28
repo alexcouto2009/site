@@ -1,0 +1,162 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo da barra de navegação */
+header {
+    background-color: #333; /* Cor de fundo da barra de navegação */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+    position: fixed; /* Fixa a barra no topo */
+    width: 100%; /* Barra ocupa toda a largura */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+/* Estilo do contêiner da barra */
+header .container {
+    width: 80%; /* Largura do contêiner da barra */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    list-style: none; /* Remove os pontos da lista */
+    text-align: center; /* Centraliza os itens */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de cada item de lista */
+nav ul li {
+    display: inline-block; /* Exibe os itens em linha */
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links */
+nav ul li a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    position: relative; /* Para posicionar o sublinhado animado */
+    padding-bottom: 5px; /* Espaço abaixo do texto para o sublinhado */
+    transition: color 0.3s ease-in-out; /* Transição suave para a cor do texto */
+}
+
+/* Animação do sublinhado */
+nav ul li a::after {
+    content: ''; /* Cria um novo conteúdo */
+    position: absolute; /* Posiciona o sublinhado abaixo do texto */
+    bottom: 0; /* Fixa o sublinhado na parte inferior do link */
+    left: 0;
+    width: 0; /* Começa com largura 0 */
+    height: 3px; /* Altura do sublinhado */
+    background-color: #4CAF50; /* Cor verde do sublinhado */
+    transition: width 0.3s ease-in-out; /* Transição suave do sublinhado */
+}
+
+/* Efeito de hover nos links */
+nav ul li a:hover {
+    color: #4CAF50; /* Muda a cor do texto para verde */
+}
+
+/* Efeito do sublinhado ao passar o mouse */
+nav ul li a:hover::after {
+    width: 100%; /* O sublinhado se expande para a largura total */
+}
+
+/* Seção Principal */
+.main-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Estilo da seção de vídeo */
+.video-section {
+    text-align: center; /* Centraliza o vídeo */
+    padding: 20px; /* Espaço ao redor do vídeo */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    margin-top: 80px; /* Espaço abaixo da barra de navegação */
+}
+
+.video-container {
+    max-width: 800px; /* Largura máxima do vídeo */
+    margin: 0 auto; /* Centraliza o vídeo */
+    border: 5px solid #333; /* Borda ao redor do vídeo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Estilo para as imagens do slideshow */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides img {
+    width: 100%; /* Faz com que a largura da imagem seja 100% do slide */
+    height: auto; /* Proporcional */
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .main-content p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

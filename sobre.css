@@ -1,0 +1,167 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo da barra de navegação */
+header {
+    background-color: #333; /* Cor de fundo da barra de navegação */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+    position: fixed; /* Fixa a barra no topo */
+    width: 100%; /* Barra ocupa toda a largura */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+/* Estilo do contêiner */
+.container {
+    width: 80%; /* Largura do contêiner da barra */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    list-style: none; /* Remove os pontos da lista */
+    text-align: center; /* Centraliza os itens */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de cada item de lista */
+nav ul li {
+    display: inline-block; /* Exibe os itens em linha */
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links */
+nav ul li a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    position: relative; /* Para posicionar o sublinhado animado */
+    padding-bottom: 5px; /* Espaço abaixo do texto para o sublinhado */
+    transition: color 0.3s ease-in-out; /* Transição suave para a cor do texto */
+}
+
+/* Animação do sublinhado */
+nav ul li a::after {
+    content: ''; /* Cria um novo conteúdo */
+    position: absolute; /* Posiciona o sublinhado abaixo do texto */
+    bottom: 0; /* Fixa o sublinhado na parte inferior do link */
+    left: 0;
+    width: 0; /* Começa com largura 0 */
+    height: 3px; /* Altura do sublinhado */
+    background-color: #4CAF50; /* Cor verde do sublinhado */
+    transition: width 0.3s ease-in-out; /* Transição suave do sublinhado */
+}
+
+/* Efeito de hover nos links */
+nav ul li a:hover {
+    color: #4CAF50; /* Muda a cor do texto para verde */
+}
+
+/* Efeito do sublinhado ao passar o mouse */
+nav ul li a:hover::after {
+    width: 100%; /* O sublinhado se expande para a largura total */
+}
+
+
+/* Seção Vídeo */
+#sobre .video-section {
+    margin-bottom: 0;
+    height: 100vh; /* Faz com que a seção ocupe a altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Garante que o vídeo fique centralizado */
+}
+
+#sobre .video-container {
+    width: 100vw; /* 100% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    overflow: hidden;
+}
+
+#sobre .video-container iframe {
+    width: 100%; /* Largura 100% do contêiner */
+    height: 100%; /* Altura 100% do contêiner */
+    border: none; /* Remove a borda */
+}
+
+/* Responsividade: Ajusta para telas pequenas */
+@media (max-width: 768px) {
+    #sobre .video-container iframe {
+        width: 100%;
+        height: 300px; /* Menor altura para telas pequenas */
+    }
+}
+
+
+
+
+/* Seção Sobre */
+#sobre .main-content {
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#sobre .main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#sobre .main-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #sobre header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #sobre header nav ul li a {
+        font-size: 1rem;
+    }
+
+    #sobre footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustando a margem para garantir que o conteúdo fique abaixo do vídeo */
+#sobre .main-content {
+    margin-top: 60px; /* Adiciona espaço suficiente entre o vídeo e o conteúdo */
+}
+
+/* Certifique-se de que o vídeo e a seção sobre tenham a margem apropriada */
+#sobre .video-section {
+    margin-bottom: 60px; /* Garante que o vídeo tenha espaço suficiente antes da seção sobre */
+}

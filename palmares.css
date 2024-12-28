@@ -1,0 +1,159 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Barra de Navegação */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Seção Palmarés */
+.palmares-section {
+    margin-top: 100px; /* Espaço para a barra de navegação */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.palmares-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Container para os Anos - Grid Layout (2 por linha) */
+.years-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 itens por linha */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cartões de Ano */
+.year-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Cabeçalho do Ano */
+.year-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.year-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Foto do Ano */
+.year-photo img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-top: 5px solid #4CAF50;
+}
+
+/* Informações do Ano */
+.year-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.result {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.medal {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.gold {
+    color: gold;
+}
+
+.silver {
+    color: silver;
+}
+
+.bronze {
+    color: #cd7f32;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .years-container {
+        grid-template-columns: 1fr; /* 1 item por linha em telas menores */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
