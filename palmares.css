@@ -127,6 +127,13 @@ nav ul li a:hover {
 .bronze {
     color: #cd7f32;
 }
+.japao {
+    color: #007BFF; /* tom de azul moderno */
+    background-color: #e6f0ff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
