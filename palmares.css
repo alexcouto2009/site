@@ -135,6 +135,88 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
+.years-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* espaço entre cartões */
+    padding-bottom: 20px;
+}
+
+.year-card {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .year-card {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .highlight-stats {
+        text-align: center;
+        margin: 40px 0;
+        padding: 20px;
+        background: linear-gradient(to bottom, #fdfdfd, #f5f5f5);
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    
+    .highlight-stats h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+    .stats-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .stat-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stat-card .icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    
+    .stat-card .number {
+        font-size: 28px;
+        font-weight: bold;
+        color: #111;
+    }
+    
+    .stat-card .label {
+        font-size: 15px;
+        color: #666;
+    }
+    
+    /* Cores específicas */
+    .stat-card.gold { border-top: 5px solid gold; }
+    .stat-card.silver { border-top: 5px solid silver; }
+    .stat-card.bronze { border-top: 5px solid #cd7f32; }
+    .stat-card.total { border-top: 5px solid #5e60ce; }
+    .stat-card.intl { border-top: 5px solid #198754; }
+    .stat-card.podium { border-top: 5px solid #ffc107; }
+    .stat-card.record { border-top: 5px solid #dc3545; }
+    
+    
+
+
 /* Responsividade */
 @media (max-width: 768px) {
     .years-container {
