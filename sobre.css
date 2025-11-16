@@ -415,6 +415,73 @@ footer {
     text-decoration: underline;
 }
 
+/* === Slideshow simples: "Outros momentos" === */
+
+.more-media {
+    padding: 30px 0 40px;
+    background-color: #ffffff; /* fundo branco, mais clean */
+}
+
+.more-media .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.more-media-title {
+    color: #007f3f;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Grelha simples: 2 colunas em desktop, 1 em mobile */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+/* Cada item */
+.media-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Miniatura imagem (artigo / podcast) */
+.media-thumb-link img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Miniatura vídeo (iframe pequeno) */
+.media-thumb-iframe {
+    width: 100%;
+    height: 130px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.media-thumb-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Link de texto por baixo da miniatura */
+.media-text-link {
+    font-size: 0.9rem;
+    color: #007f3f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.media-text-link:hover {
+    text-decoration: underline;
+}
+
 
 footer p {
     font-size: 14px;
