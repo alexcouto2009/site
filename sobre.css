@@ -136,6 +136,39 @@ footer {
     text-align: center;
 }
 
+/* Secção do vídeo em destaque */
+.video-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.video-container-outer {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-container-outer h2 {
+    color: #007f3f;
+    margin-bottom: 20px;
+}
+
+/* Contentor do vídeo */
+.video-container {
+    max-width: 800px;      /* controla a largura máxima do vídeo */
+    margin: 0 auto;        /* centra o contentor */
+}
+
+/* Iframe do YouTube */
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* mantém proporção correta */
+    display: block;
+    border-radius: 10px;
+    border: none;
+}
+
+
 footer p {
     font-size: 14px;
 }
