@@ -168,6 +168,253 @@ footer {
     border: none;
 }
 
+/* Mais vídeos & reportagens */
+.more-media {
+    padding: 40px 0 60px;
+    background-color: #f7f7f7;
+}
+
+.more-media .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.more-media-title {
+    color: #007f3f;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.more-media-subtitle {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Carrossel horizontal */
+.media-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.media-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.media-slider::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.media-slider::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 3px;
+}
+
+/* Cards */
+.media-card {
+    flex: 0 0 auto;
+    width: 280px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    padding: 12px 12px 14px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.media-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* iframe dentro do card */
+.media-thumb iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Card do artigo (sem iframe) */
+.article-thumb {
+    background: linear-gradient(135deg, #007f3f, #00a35a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+}
+
+.article-thumb .badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin-bottom: 6px;
+}
+
+.article-thumb .article-title {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.media-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin: 4px 0 6px;
+}
+
+.media-link {
+    font-size: 0.85rem;
+    color: #007f3f;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.media-link:hover {
+    text-decoration: underline;
+}
+.media-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Secção do slideshow */
+.more-media {
+    padding: 40px 0 60px;
+    background-color: #f7f7f7;
+}
+
+.more-media .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.more-media-title {
+    color: #007f3f;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.more-media-subtitle {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Carrossel horizontal */
+.media-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.media-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.media-slider::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.media-slider::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 3px;
+}
+
+/* Cards */
+.media-card {
+    flex: 0 0 auto;
+    width: 280px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    padding: 12px 12px 14px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Thumb (imagem ou iframe) */
+.media-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Imagens dentro do card */
+.media-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* iframes dentro do card */
+.media-thumb iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Badge (Artigo / Podcast) */
+.badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.media-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin: 4px 0 6px;
+}
+
+.media-link {
+    font-size: 0.85rem;
+    color: #007f3f;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.media-link:hover {
+    text-decoration: underline;
+}
+
 
 footer p {
     font-size: 14px;
