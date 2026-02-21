@@ -1,140 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site - Início</title>
-    <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandre Couto | Início</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <div class="details">
-        <span class="calendar">&#128197; 15/07/2024</span>
-        <span class="medals"><i class="fas fa-medal" style="color: gold;"></i> 1ª Colocação (Ouro)</span> <!-- Medalha de ouro -->
-        <span class="medals"><i class="fas fa-medal" style="color: silver;"></i> 2ª Colocação (Prata)</span> <!-- Medalha de prata -->
-        <span class="medals"><i class="fas fa-medal" style="color: #cd7f32;"></i> 3ª Colocação (Bronze)</span> <!-- Medalha de bronze -->
-    </div>
-<!-- Barra de Navegação -->
+
 <header>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="palmares.html">Palmarés</a></li>
-                <li><a href="equipa.html">Equipa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a class="active" href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="palmares.html">Palmarés</a></li>
+        <li><a href="equipa.html">Equipa</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Natação Adaptada</p>
+        <h1>ALEXANDRE COUTO</h1>
+        <p class="subtitle">Atleta do Sporting Clube de Portugal</p>
 
-<!-- Seção Principal -->
-<section class="main-content">
+        <div class="hero-actions">
+          <a class="btn" href="sobre.html">Conhecer história</a>
+          <a class="btn btn-ghost" href="contacto.html">Contactar</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="mariposa.png" alt="Alexandre Couto" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS RECENTES -->
+  <section class="section">
     <div class="container">
-        <div class="text-container">
-            <h1 style="color: white;">ALEXANDRE COUTO</h1>
-        <p style="color: white;">Nadador Sporting Clube de Portugal</p>
-        </div>
+      <h2>Eventos recentes <span class="highlight">| as últimas provas</span></h2>
+      <p class="muted">Alguns momentos mais recentes do meu percurso competitivo.</p>
+
+      <div class="events-grid">
+
+        <article class="event-card">
+          <div class="event-photo">
+            <img src="gala25.JPG" alt="Atleta do Ano 2024">
+          </div>
+          <div class="event-body">
+            <h3>Atleta do Ano 2024</h3>
+            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Março 2025 · Santo Tirso</p>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-photo">
+            <img src="equipa.jpg" alt="Campeonato Nacional Verão 25">
+          </div>
+          <div class="event-body">
+            <h3>Campeonato Nacional Verão 2025</h3>
+            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Junho 2025 · Rio Maior</p>
+            <div class="badges">
+              <span class="badge silver"><i class="fas fa-medal"></i> Equipas · Prata</span>
+              <span class="badge silver"><i class="fas fa-medal"></i> 100B · Prata</span>
+              <span class="badge bronze"><i class="fas fa-medal"></i> 50L/100C · Bronze</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-photo">
+            <img src="fuji_7.jpg" alt="World Para Swimming Series">
+          </div>
+          <div class="event-body">
+            <h3>World Para Swimming Series</h3>
+            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Abril 2025 · Fuji–Shizuoka</p>
+            <div class="badges">
+              <span class="badge intl">1.º evento internacional</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Adicionando a imagem -->
-<div class="hero-image">
-    <img src="mariposa.png" alt="Imagem Hero" class="hero-img">
-</div>
+  <!-- APOIOS -->
+  <section class="section section-soft">
+    <div class="container">
+      <h2>Conheça os meus <span class="highlight">apoios</span></h2>
+      <p class="muted">Obrigado a quem acredita e caminha comigo.</p>
 
-<section class="supports-section">
-    <!-- Título -->
-    <h2>EVENTOS RECENTES |<span class="highlight"> AS ÚLTIMAS PROVAS</span></h2>
-
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-        <div class="slides">
-            </div>
-            <div class="slide">
-                <div class="slide-text">
-                    <h2 class="title">Atleta do Ano 2024</h2>
-                    <p class="location">Santo Tirso</p>
-                    <div class="details">
-                        <span class="calendar">&#128197; Março 2025</span>
-                    </div>
-                </div>
-                <img src="gala25.JPG" alt="Imagem 6">
-            </div>
-        </div>
+      <div class="brands-grid">
+        <a href="https://www.sporting.pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
+          <img src="SCP.png" alt="Sporting Clube de Portugal">
+        </a>
+        <a href="https://www.standvirtual.com" target="_blank" rel="noopener noreferrer" class="brand-logo">
+          <img src="stand2.jpeg" alt="Standvirtual">
+        </a>
+        <a href="https://criticalsoftware.com/pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
+          <img src="critical.png" alt="Critical Software">
+        </a>
+        <a href="https://aquainstinct.com" target="_blank" rel="noopener noreferrer" class="brand-logo">
+          <img src="aquainstinct.jpg" alt="Aqua Instinct">
+        </a>
+        <a href="https://www.facebook.com/thefusion.pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
+          <img src="thefusion.jpeg" alt="The Fusion">
+        </a>
+      </div>
     </div>
-    <div class="slide">
-        <div class="slide-text">
-            <h2 class="title">Campeonato Nacional Verão 25</h2>
-            <p class="location">Rio Maior</p>
-            <div class="details">
-                <span class="calendar">&#128197; Junho 2025</span>
-                <span class="medals">
-                    <i class="fas fa-medal" style="color: silver;"></i> Equipas - Prata
-                    <i class="fas fa-medal" style="color: silver;"></i> 100B - Prata
-                    <i class="fas fa-medal" style="color: #6E4D25;"></i> 50L | 100C - Bronze
-                </span>
-            </div>
-            </div>
-            <img src="equipa.jpg" alt="Imagem 7">
-            </div>
-        </div>
-    </div>  
-    <div class="slides">
-    </div>
-    <div class="slide">
-        <div class="slide-text">
-            <h2 class="title">World Paraswimming Series -  1º evento internacional</h2>
-            <p class="location">Fuji-Shizuoka</p>
-            <div class="details">
-                <span class="calendar">&#128197; Abril 2025</span>
-            </div>
-        </div>
-        <img src="fuji_7.jpg" alt="Imagem 6" >
-    </div>
-</div>
-</div>
-        <!-- Botões de navegação -->
-        <!----  <button class="prev">&#10094;</button> >
-        <button class="next">&#10095;</button>
-    </div> -->
+  </section>
+</main>
 
-    <!-- Importando o arquivo JavaScript externo -->
-    <script src="script.js"></script>
-
-<section class="supports-section">
-    <!-- Título -->
-    <h2>Conheça os meus <span class="highlight">apoios!</span></h2>
-
-<section class="brands-section">
-    <div class="brands-container">
-        <a href="https://www.sporting.pt" target="_blank" class="brand-logo">
-            <img src="SCP.png" alt="Marca 1">
-        </a>
-        <a href="https://www.standvirtual.com" target="_blank" class="brand-logo">
-            <img src="stand2.jpeg" alt="Marca 2">
-        </a>
-        <a href="https://criticalsoftware.com/pt" target="_blank" class="brand-logo">
-            <img src="critical.png" alt="Marca 3">
-        </a>
-        <a href="https://aquainstinct.com" target="_blank" class="brand-logo">
-            <img src="aquainstinct.jpg" alt="Marca 4">
-        </a>
-        <a href="https://www.facebook.com/thefusion.pt" target="_blank" class="brand-logo">
-            <img src="thefusion.jpeg" alt="Marca 5">
-        </a>
-        <!-- Adicione mais logos conforme necessário -->
-    </div>
-</section>
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 </body>
 </html>

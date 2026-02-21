@@ -1,305 +1,262 @@
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --text:#111;
+  --muted:#555;
+  --border:#e9e9e9;
+  --bg-soft:#fafafa;
+  --card:#fff;
+  --shadow: 0 10px 25px rgba(0,0,0,0.06);
+  --shadow2: 0 6px 16px rgba(0,0,0,0.07);
+  --radius:14px;
+  --accent:#0a7a3b;
 }
 
-/* Estilos Globais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:#fff;
+  line-height:1.75;
 }
 
-/* Estilo da barra de navegação */
-header {
-    background-color: #333; /* Cor de fundo da barra de navegação */
-    padding: 20px 0; /* Espaçamento acima e abaixo */
-    position: fixed; /* Fixa a barra no topo */
-    width: 100%; /* Barra ocupa toda a largura */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+.container{
+  width:min(1100px, calc(100% - 32px));
+  margin:0 auto;
 }
 
-/* Estilo do contêiner */
-.container {
-    width: 80%; /* Largura do contêiner da barra */
-    margin: 0 auto; /* Centraliza o contêiner */
+/* Header */
+header{
+  position: sticky;
+  top:0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index:50;
 }
 
-/* Estilo do menu de navegação */
-nav ul {
-    list-style: none; /* Remove os pontos da lista */
-    text-align: center; /* Centraliza os itens */
-    padding: 0;
-    margin: 0;
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:12px;
+  padding:14px 0;
+  margin:0;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-/* Estilo de cada item de lista */
-nav ul li {
-    display: inline-block; /* Exibe os itens em linha */
-    margin: 0 20px; /* Espaçamento entre os itens */
+nav a{
+  text-decoration:none;
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: background 160ms ease, color 160ms ease;
+}
+nav a:hover{ background:#f3f4f6; }
+nav a.active{ background: var(--text); color:#fff; }
+
+/* Sections */
+.section{ padding: 34px 0 42px; }
+.section-soft{ background: var(--bg-soft); border-top:1px solid #eee; border-bottom:1px solid #eee; }
+
+h1{
+  margin:0 0 8px;
+  font-size: clamp(28px, 3.6vw, 44px);
+  letter-spacing: -0.7px;
+  line-height: 1.1;
+}
+h2{
+  margin:0 0 6px;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+h3{
+  margin:0 0 6px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+.muted{ margin:0 0 18px; color: var(--muted); }
+
+.highlight{ color: var(--accent); font-weight:900; }
+
+/* Hero */
+.hero{ padding: 34px 0 10px; }
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+  align-items:center;
 }
 
-/* Estilo dos links */
-nav ul li a {
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    font-size: 18px; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    position: relative; /* Para posicionar o sublinhado animado */
-    padding-bottom: 5px; /* Espaço abaixo do texto para o sublinhado */
-    transition: color 0.3s ease-in-out; /* Transição suave para a cor do texto */
+.kicker{
+  display:inline-block;
+  font-weight:900;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
 }
 
-/* Animação do sublinhado */
-nav ul li a::after {
-    content: ''; /* Cria um novo conteúdo */
-    position: absolute; /* Posiciona o sublinhado abaixo do texto */
-    bottom: 0; /* Fixa o sublinhado na parte inferior do link */
-    left: 0;
-    width: 0; /* Começa com largura 0 */
-    height: 3px; /* Altura do sublinhado */
-    background-color: #4CAF50; /* Cor verde do sublinhado */
-    transition: width 0.3s ease-in-out; /* Transição suave do sublinhado */
+.subtitle{
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 16px;
 }
 
-/* Efeito de hover nos links */
-nav ul li a:hover {
-    color: #4CAF50; /* Muda a cor do texto para verde */
+.hero-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-/* Efeito do sublinhado ao passar o mouse */
-nav ul li a:hover::after {
-    width: 100%; /* O sublinhado se expande para a largura total */
+.btn{
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight: 900;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+.btn:hover{ opacity:0.95; transform: translateY(-1px); }
+
+.btn-ghost{
+  background:#fff;
+  color: var(--text);
+  border: 1px solid #e6e6e6;
+}
+.btn-ghost:hover{ background:#f7f7f7; transform: translateY(-1px); }
+
+.hero-image{
+  background:#fff;
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow: var(--shadow2);
+}
+.hero-img{
+  width:100%;
+  height: 360px;
+  object-fit: cover;
+  display:block;
 }
 
-
-/* Seção Principal */
-.main-content {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
+/* Events */
+.events-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
 }
 
-.main-content h1 {
-    font-size: 36px;
-    color: #222;
+.event-card{
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow: var(--shadow2);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.event-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
-.main-content p {
-    font-size: 18px;
-    color: #555;
+.event-photo{
+  aspect-ratio: 16/10;
+  background:#f3f4f6;
+}
+.event-photo img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
 }
 
-/* Rodapé */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.event-body{ padding: 14px; }
+.event-meta{
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  display:flex;
+  gap:8px;
+  align-items:center;
 }
 
-footer p {
-    font-size: 14px;
+.badges{
+  margin-top: 10px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* Estilo para a seção principal */
-.main-content {
-    position: relative;
-    height: 0vh; /* Faz a seção ocupar toda a altura da tela */
-    text-align: left; /* Alinha o texto à esquerda */
-    color: white; /* Cor do texto */
-    padding-top: 20px; /* Espaço para não cobrir o texto pela barra de navegação */
-    display: flex; /* Usamos flexbox para posicionamento */
-    justify-content: flex-start; /* Alinha o texto à esquerda */
-    align-items: center; /* Centraliza o texto verticalmente */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid #eee;
+  background:#fff;
+  color: var(--text);
 }
 
-/* Contêiner de texto */
-.text-container {
-    position: absolute; /* Posiciona o texto em cima da imagem */
-    top: 100%; /* Centraliza verticalmente */
-    right: 10px; /* Alinha o texto à direita */
-    transform: translateY(0%); /* Ajuste fino para garantir que o texto esteja no centro */
-    z-index: 1; /* Garante que o texto fique acima da imagem */
-    color: white; /* Define a cor do texto como branca */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto para melhorar a legibilidade */
-    animation: fadeIn 2s ease-in-out forwards; /* Aparece gradualmente */
+.badge.silver{ background:#f7f7f7; }
+.badge.bronze{ background:#fff6ef; border-color:#ffe2cc; }
+.badge.intl{ background: rgba(10,122,59,0.10); border-color: rgba(10,122,59,0.18); color: var(--accent); }
+
+/* Brands */
+.brands-grid{
+  display:grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
 }
 
-/* Estilo para o contêiner da imagem */
-.hero-image {
-    width: 100%; /* A largura do contêiner ocupa 100% da tela */
-    overflow: hidden; /* Isso ajuda a evitar que a imagem ultrapasse o contêiner */
-    position: relative; /* Para garantir que a imagem fique dentro do seu contêiner */
+.brand-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow2);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  min-height: 86px;
 }
 
-/* Estilo para a imagem em si */
-.hero-img {
-    width: 100%; /* A imagem ocupará 100% da largura do contêiner */
-    height: auto; /* A altura será proporcional à largura da imagem */
-    display: block; /* Remove espaços em branco ao redor da imagem */
-    object-fit: cover; /* Faz com que a imagem cubra todo o espaço disponível, cortando partes da imagem se necessário */
+.brand-logo:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
-/* Estilo da seção de vídeo */
-.video-section {
-    text-align: center; /* Centraliza o vídeo */
-    padding: 20px; /* Espaço ao redor do vídeo */
-    background-color: #f9f9f9; /* Cor de fundo suave */
-    margin-top: 80px; /* Espaço abaixo da barra de navegação */
+.brand-logo img{
+  max-width: 100%;
+  max-height: 52px;
+  object-fit: contain;
 }
 
-.video-container {
-    max-width: 800px; /* Largura máxima do vídeo */
-    margin: 0 auto; /* Centraliza o vídeo */
-    border: 5px solid #333; /* Borda ao redor do vídeo (opcional) */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra (opcional) */
+/* Footer */
+footer{
+  padding: 22px 0;
+  border-top: 1px solid #eee;
+  background:#fff;
+  color: var(--muted);
+  text-align:center;
 }
 
-/* Estilo para o slideshow */
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
+/* Responsive */
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-img{ height: 320px; }
+  .events-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .brands-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transição suave entre os slides */
+@media (max-width: 520px){
+  .events-grid{ grid-template-columns: 1fr; }
+  .brands-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
-
-.slide {
-    min-width: 33.33%; /* Cada slide ocupa 1/3 da largura do container */
-    box-sizing: border-box;
-    position: relative;
-}
-
-/* Tamanho fixo para as imagens */
-.slide img {
-    width: 100%; /* Faz com que a largura da imagem seja 100% do slide */
-    height: 300px; /* Define uma altura fixa para todas as imagens */
-    object-fit: cover; /* Faz com que a imagem se ajuste ao espaço, cortando se necessário */
-    border-radius: 10px;
-}
-
-/* Texto sobre as imagens */
-.slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.slide:hover .slide-text {
-    opacity: 1; /* Aparece o texto quando passa o mouse sobre a imagem */
-}
-
-/* Botões de navegação */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
-
-
-/* Estilo para a seção de marcas */
-
-.supports-section {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Estilo para o título */
-.supports-section h2 {
-    font-size: 32px; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o título em negrito */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-}
-
-/* Estilo para a palavra "apoios" */
-.highlight {
-    color: green; /* Cor verde para "apoios" */
-}
-
-.brands-section {
-    background-color: #f4f4f4; /* Cor de fundo da seção (ajuste como necessário) */
-    padding: 50px 0; /* Espaçamento na parte superior e inferior */
-    text-align: center; /* Centraliza as logos */
-}
-
-/* Estilo para o contêiner das logos */
-.brands-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Faz as logos quebrarem para a linha seguinte se necessário */
-    gap: 30px; /* Espaço entre as logos */
-}
-
-/* Estilo para cada logo */
-.brand-logo {
-    display: inline-block;
-    opacity: 0.6; /* Opacidade inicial */
-    transition: opacity 0.3s ease; /* Transição suave de opacidade */
-}
-
-.brand-logo:hover {
-    opacity: 1; /* Aumenta a opacidade ao passar o mouse */
-}
-
-/* Estilo para as imagens das logos */
-.brand-logo img {
-    width: 100px; /* Largura fixa para todas as imagens */
-    height: 100px; /* Altura fixa para todas as imagens */
-    object-fit: contain; /* Faz a imagem se ajustar dentro do quadro, sem distorção */
-    display: block; /* Remove espaços em branco ao redor da imagem */
-    margin: 0 auto; /* Centraliza as imagens se necessário */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .main-content h1 {
-        font-size: 28px;
-    }
-
-    .main-content p {
-        font-size: 16px;
-    }
-}
-

@@ -1,248 +1,213 @@
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Base (igual ao Sobre) */
+:root{
+  --text: #111;
+  --muted: #555;
+  --border: #e9e9e9;
+  --bg-soft: #fafafa;
+  --card: #fff;
+  --shadow: 0 10px 25px rgba(0,0,0,0.06);
+  --shadow2: 0 6px 16px rgba(0,0,0,0.07);
+  --radius: 14px;
+  --accent: #0a7a3b; /* ajusta se quiseres */
+  --accent-soft: rgba(10, 122, 59, 0.10);
 }
 
-/* Estilos Globais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.75;
 }
 
-/* Barra de Navegação */
-header {
-    background-color: #333;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+.container{
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Header */
+header{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:12px;
+  padding:14px 0;
+  margin:0;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+nav a{
+  text-decoration:none;
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: background 160ms ease, color 160ms ease;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+nav a:hover{ background:#f3f4f6; }
+
+nav a.active{
+  background: var(--text);
+  color:#fff;
 }
 
-nav ul li a:hover {
-    color: #4CAF50;
+/* Página */
+.palmares-section{
+  padding: 34px 0 42px;
 }
 
-/* Seção Palmarés */
-.palmares-section {
-    margin-top: 100px; /* Espaço para a barra de navegação */
-    padding: 50px 0;
-    text-align: center;
+h1{
+  margin: 0 0 8px;
+  font-size: clamp(28px, 3.2vw, 40px);
+  letter-spacing: -0.6px;
+  line-height: 1.15;
 }
 
-.palmares-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.subtitle{
+  margin: 0;
+  color: var(--muted);
 }
 
-/* Container para os Anos - Grid Layout (2 por linha) */
-.years-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 itens por linha */
-    gap: 30px;
-    margin-top: 40px;
+/* Stats highlight */
+.highlight-stats{
+  text-align: left;
+  padding: 18px;
+  background: var(--bg-soft);
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
 }
 
-/* Cartões de Ano */
-.year-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.stats-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
 }
 
-/* Cabeçalho do Ano */
-.year-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-align: center;
+.stat-card{
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--shadow2);
 }
 
-.year-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+.stat-card .icon{
+  font-size: 28px;
+  margin-bottom: 8px;
 }
 
-/* Foto do Ano */
-.year-photo img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-top: 5px solid #4CAF50;
+.stat-card .number{
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.1;
 }
 
-/* Informações do Ano */
-.year-info {
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: left;
+.stat-card .label{
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
 }
 
-.result {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #333;
+.stat-card.gold{ border-top: 5px solid #d4af37; }
+.stat-card.silver{ border-top: 5px solid #bdbdbd; }
+.stat-card.bronze{ border-top: 5px solid #cd7f32; }
+.stat-card.podium{ border-top: 5px solid #ffc107; }
+.stat-card.record{ border-top: 5px solid #dc3545; }
+.stat-card.intl{ border-top: 5px solid var(--accent); }
+
+/* Years list */
+.years-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 18px;
 }
 
-.medal {
-    font-size: 1.5rem;
-    margin-right: 10px;
+/* Year card */
+.year-card{
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: var(--shadow2);
 }
 
-.gold {
-    color: gold;
+.year-header{
+  background: var(--text);
+  color: #fff;
+  padding: 12px 14px;
 }
 
-.silver {
-    color: silver;
+.year-title{
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
 }
 
-.bronze {
-    color: #cd7f32;
-}
-.japao {
-    color: #007BFF; /* tom de azul moderno */
-    background-color: #e6f0ff;
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-weight: 600;
+.year-photo img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display:block;
 }
 
-.years-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* espaço entre cartões */
-    padding-bottom: 20px;
+.year-info{
+  padding: 14px;
+  background: #fff;
 }
 
-.year-card {
-    width: 100%;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.result{
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #222;
 }
 
-    .year-card {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .highlight-stats {
-        text-align: center;
-        margin: 40px 0;
-        padding: 20px;
-        background: linear-gradient(to bottom, #fdfdfd, #f5f5f5);
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    
-    .highlight-stats h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-        color: #333;
-    }
-    
-    .stats-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
-        justify-content: center;
-    }
-    
-    .stat-card {
-        background-color: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        transition: transform 0.2s ease;
-    }
-    
-    .stat-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .stat-card .icon {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-    
-    .stat-card .number {
-        font-size: 28px;
-        font-weight: bold;
-        color: #111;
-    }
-    
-    .stat-card .label {
-        font-size: 15px;
-        color: #666;
-    }
-    
-    /* Cores específicas */
-    .stat-card.gold { border-top: 5px solid gold; }
-    .stat-card.silver { border-top: 5px solid silver; }
-    .stat-card.bronze { border-top: 5px solid #cd7f32; }
-    .stat-card.total { border-top: 5px solid #5e60ce; }
-    .stat-card.intl { border-top: 5px solid #198754; }
-    .stat-card.podium { border-top: 5px solid #ffc107; }
-    .stat-card.record { border-top: 5px solid #dc3545; }
-    
-    
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .years-container {
-        grid-template-columns: 1fr; /* 1 item por linha em telas menores */
-    }
+.medal{
+  font-weight: 900;
+  margin-right: 8px;
 }
 
-/* Rodapé */
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+.medal.gold{ color: #b8860b; }
+.medal.silver{ color: #777; }
+.medal.bronze{ color: #8a4b2a; }
+.medal.cup{ color: var(--text); }
+
+.medal.japao{
+  color: #0b5ed7;
+  background: #e6f0ff;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: 900;
 }
 
-footer p {
-    font-size: 14px;
+/* Footer */
+footer{
+  padding: 22px 0;
+  border-top: 1px solid #eee;
+  background: #fff;
+  color: var(--muted);
+  text-align: center;
 }
 
+/* Responsive */
+@media (max-width: 980px){
+  .year-photo img{ height: 240px; }
+}
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 520px){
+  .stats-cards{ grid-template-columns: 1fr; }
+  .year-photo img{ height: 210px; }
+}

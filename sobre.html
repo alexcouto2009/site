@@ -1,55 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim</title>
-    <link rel="stylesheet" href="sobre.css"> <!-- CSS específico para esta página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim | Alexandre Couto</title>
+  <link rel="stylesheet" href="sobre.css">
 </head>
 
-<body id="sobre"> <!-- ID 'sobre' aplicado ao body -->
+<body id="sobre">
 
-<!-- Barra de Navegação -->
 <header>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="palmares.html">Palmarés</a></li>
-                <li><a href="equipa.html">Equipa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a class="active" href="sobre.html">Sobre</a></li>
+        <li><a href="palmares.html">Palmarés</a></li>
+        <li><a href="equipa.html">Equipa</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<!-- Seção Podcast -->
-<!-- <section id="podcast" class="section" style="background-color: #f9f9f9; padding: 60px 0;">
-    <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <h2 style="color: #007f3f; margin-bottom: 20px;">🎧 Podcast: O Sentido da Vida</h2>
-      <p style="font-size: 1.1em; margin-bottom: 30px;">
-        Participei no podcast <strong>"O Sentido da Vida"</strong>, da Rádio Comercial, onde falei sobre superação, desporto e como a vida é mais bonita do que os problemas.
-      </p>
-      <img src="comercial.jpg" alt="Capa do podcast O Sentido da Vida"
-           style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 25px;">
-      <br>
-      <a href="https://radiocomercial.pt/podcasts/o-sentido-da-vida/t1/a-vida-e-mais-bonita-do-que-os-problemas-com-alexandre-couto"
-         target="_blank"
-         style="display: inline-block; background-color: #007f3f; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1em;">
-        ▶️ Ouvir Episódio
-      </a>
-    </div>
-</section>
--->
-<!-- Seção Vídeo -->
+<!-- Vídeo em destaque -->
 <section class="video-section">
   <div class="container video-container-outer">
     <h2>🎥 Vídeo em Destaque</h2>
+    <p class="subtitle">Um momento que resume bem a minha história dentro e fora de água.</p>
     <div class="video-container">
       <iframe 
         src="https://www.youtube.com/embed/uz7gSthLHNs?start=104" 
-        title="YouTube video player" 
+        title="YouTube video player"
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
@@ -58,7 +40,7 @@
   </div>
 </section>
 
-<!-- Slideshow / Mais Vídeos, Podcasts & Reportagens -->
+<!-- Media -->
 <section class="more-media">
   <div class="container">
     <h3 class="more-media-title">Mais vídeos, podcasts &amp; reportagens</h3>
@@ -66,46 +48,35 @@
       Alguns dos momentos que ajudam a contar a minha história dentro e fora de água.
     </p>
 
-    <div class="media-slider">
-      <!-- Card 1 – Artigo Farmácias Portuguesas -->
+    <div class="media-grid">
       <article class="media-card">
         <div class="media-thumb">
-          <a href="https://www.farmaciasportuguesas.pt/blog/nao-troco-a-minha-vida-por-outra"
-             target="_blank" rel="noopener noreferrer">
-            <img src="farmacias.png"
-                 alt="Reportagem 'Não troco a minha vida por outra' – Farmácias Portuguesas">
+          <a href="https://www.farmaciasportuguesas.pt/blog/nao-troco-a-minha-vida-por-outra" target="_blank" rel="noopener noreferrer">
+            <img src="farmacias.png" alt="Reportagem 'Não troco a minha vida por outra' – Farmácias Portuguesas">
           </a>
-          <span class="badge badge-top-left">Artigo</span>
+          <span class="badge">Artigo</span>
         </div>
         <h4 class="media-card-title">Não troco a minha vida por outra</h4>
-        <a class="media-link"
-           href="https://www.farmaciasportuguesas.pt/blog/nao-troco-a-minha-vida-por-outra"
-           target="_blank" rel="noopener noreferrer">
-          Ler reportagem
+        <a class="media-link" href="https://www.farmaciasportuguesas.pt/blog/nao-troco-a-minha-vida-por-outra" target="_blank" rel="noopener noreferrer">
+          Ler reportagem →
         </a>
       </article>
 
-      <!-- Card 4 – Podcast Rádio Comercial -->
       <article class="media-card">
         <div class="media-thumb">
-          <a href="https://radiocomercial.pt/podcasts/o-sentido-da-vida/t1/a-vida-e-mais-bonita-do-que-os-problemas-com-alexandre-couto"
-             target="_blank" rel="noopener noreferrer">
-            <img src="comercial.jpg"
-                 alt="Podcast 'O Sentido da Vida' – Rádio Comercial">
+          <a href="https://radiocomercial.pt/podcasts/o-sentido-da-vida/t1/a-vida-e-mais-bonita-do-que-os-problemas-com-alexandre-couto" target="_blank" rel="noopener noreferrer">
+            <img src="comercial.jpg" alt="Podcast 'O Sentido da Vida' – Rádio Comercial">
           </a>
-          <span class="badge badge-top-left">Podcast</span>
+          <span class="badge">Podcast</span>
         </div>
         <h4 class="media-card-title">Podcast “O Sentido da Vida”</h4>
-        <a class="media-link"
-           href="https://radiocomercial.pt/podcasts/o-sentido-da-vida/t1/a-vida-e-mais-bonita-do-que-os-problemas-com-alexandre-couto"
-           target="_blank" rel="noopener noreferrer">
-          Ouvir episódio
+        <a class="media-link" href="https://radiocomercial.pt/podcasts/o-sentido-da-vida/t1/a-vida-e-mais-bonita-do-que-os-problemas-com-alexandre-couto" target="_blank" rel="noopener noreferrer">
+          Ouvir episódio →
         </a>
       </article>
 
-      <!-- Card 2 – Vídeo YouTube 1 -->
       <article class="media-card">
-        <div class="media-thumb">
+        <div class="media-thumb media-embed">
           <iframe
             src="https://www.youtube.com/embed/bbGlHH9fVx0"
             title="Reportagem em vídeo 1"
@@ -113,67 +84,94 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
+          <span class="badge">Vídeo</span>
         </div>
         <h4 class="media-card-title">Reportagem em vídeo</h4>
-        <a class="media-link"
-           href="https://www.youtube.com/watch?v=bbGlHH9fVx0"
-           target="_blank" rel="noopener noreferrer">
-          Ver no YouTube
+        <a class="media-link" href="https://www.youtube.com/watch?v=bbGlHH9fVx0" target="_blank" rel="noopener noreferrer">
+          Ver no YouTube →
         </a>
       </article>
 
-      <!-- Card 3 – Vídeo YouTube 2 -->
       <article class="media-card">
-        <div class="media-thumb">
+        <div class="media-thumb media-embed">
           <iframe
             src="https://www.youtube.com/embed/rVDo80aXyEM"
-            title="Reportagem em vídeo 2"
+            title="RTP | A Nossa Tarde"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
+          <span class="badge">RTP</span>
         </div>
         <h4 class="media-card-title">RTP | A Nossa Tarde</h4>
-        <a class="media-link"
-           href="https://youtu.be/rVDo80aXyEM"
-           target="_blank" rel="noopener noreferrer">
-          Ver no YouTube
+        <a class="media-link" href="https://youtu.be/rVDo80aXyEM" target="_blank" rel="noopener noreferrer">
+          Ver no YouTube →
         </a>
       </article>
-
-      
     </div>
   </div>
 </section>
 
-
-<!-- Seção Sobre -->
+<!-- Sobre -->
 <section class="main-content">
-    <div class="container">
-        <h1>Sobre Mim</h1>
-        <p>
-            Olá! O meu nome é Alexandre Couto, tenho 24 anos, sou de Santo Tirso, atleta de Natação Adaptada do Sporting Clube de Portugal e da Seleção Nacional, e estudante de Engenharia Aeroespacial no Instituto Superior Técnico.
-            Convivo com uma condição rara chamada síndrome de Morquio tipo B, que afeta principalmente a estrutura óssea e muscular. Foi por recomendação médica que entrei na natação ainda em criança — e foi dentro de água que descobri um lugar seguro, libertador e transformador.
-            Comecei na Piscina Municipal de Santo Tirso e, por volta dos 10 anos, entrei para a equipa do Ginásio Clube de Santo Tirso, competindo inicialmente na natação pura. Mais tarde, e por não poder competir como uma criança “dita normal”, afastei-me temporariamente da modalidade, mas o regresso à água — agora na natação adaptada — reacendeu a minha paixão.
-            Desde 2021, represento o Sporting Clube de Portugal, onde comecei a competir a nível nacional com regularidade e sucesso. Tenho crescido no panorama nacional, conquistando tudo o que havia para conquistar nas minhas classes. Sou tetracampeão nacional (então na classe S9), com vitórias nos 50m, 100m e 400m livres, além dos 100m costas, para além de mais dois títulos nacionais alcançados no ano anterior e vários títulos coletivos. Tenho também o orgulho de ser recordista nacional nos 400m estilos, uma das provas mais exigentes. Atualmente, compito nas classes S8, SB7 e SM8.
-            Em abril de 2025, dei um dos passos mais importantes da minha carreira ao representar Portugal pela primeira vez numa prova internacional: o World Para Swimming Series Fuji–Shizuoka, no Japão. Foi o início do meu percurso no panorama internacional, depois de ter crescido e consolidado o meu caminho a nível nacional. Antes da competição, realizei também uma classificação desportiva internacional, essencial para definir oficialmente a minha classe no panorama mundial.
-            A natação adaptada não é só desporto — é uma escola de vida. Através dela, cresci como atleta e como pessoa, ao lado de colegas que me ensinaram que o limite, muitas vezes, somos nós que o impomos. Partilhar piscina com atletas surdos ensinou-me Língua Gestual Portuguesa; conviver com colegas com síndrome de Down mostrou-me o poder da superação e da autenticidade.
-            Paralelamente, estudo no Técnico, onde aplico diariamente a mesma dedicação e resiliência. Tanto na engenharia como no desporto, é preciso estudar, experimentar e melhorar constantemente. Até conceitos como o escoamento da água, que aprendo no curso, são úteis quando estou a aperfeiçoar a minha técnica na piscina. Nem sempre é fácil conciliar tudo, mas tenho tido o apoio de professores e amigos que fazem a diferença — desde uma compreensão nas avaliações até um simples gesto de carregar a mochila nos dias difíceis.
-            A minha mensagem para quem está a começar, seja no desporto ou noutra paixão, é simples: arrisquem, mesmo com medo. Se algo vos faz bem, então sigam em frente. Os desafios existem, mas também existem formas de os ultrapassar. O importante é nunca desistir.
-            Gostava também de agradecer muito aos meus pais, à minha irmã e aos meus avós, que sempre estiveram lá para mim. Sempre foram o meu porto seguro. Acrescento ainda o meu treinador, Rui Gama, que acima de resultados vê pessoas e é um dos meus pilares de vida. Agradeço também a todo o meu staff, em especial a um dos meus preparadores físicos, o João Carvalho, que, tal como o Rui, está comigo desde o princípio.
-            Para terminar, costumo dizer que, se me dessem a escolher nascer com o meu problema ou nascer “normal”, escolheria sempre o caminho que tive e a luta que tenho — aprendi tanto! Sinto, verdadeiramente, que no desporto convencional nascem heróis, pelo esforço, dedicação e tudo o que é realmente necessário para levar o corpo aos limites — mas é no desporto adaptado que aparecem heróis que já nada têm a provar… e ainda assim fazem mais e mais.
-        </p>
+  <div class="container">
+    <h1>Sobre Mim</h1>
+
+    <div class="about-wrap">
+      <div class="about-body">
+
+        <h2>Quem sou</h2>
+        <p>Olá! O meu nome é Alexandre Couto, tenho 24 anos, sou de Santo Tirso, atleta de Natação Adaptada do Sporting Clube de Portugal e da Seleção Nacional, e estudante de Engenharia Aeroespacial no Instituto Superior Técnico.</p>
+
+        <h2>A minha história</h2>
+        <p>Convivo com uma condição rara chamada síndrome de Morquio tipo B, que afeta principalmente a estrutura óssea e muscular. Foi por recomendação médica que entrei na natação ainda em criança — e foi dentro de água que descobri um lugar seguro, libertador e transformador.</p>
+        <p>Comecei na Piscina Municipal de Santo Tirso e, por volta dos 10 anos, entrei para a equipa do Ginásio Clube de Santo Tirso. Mais tarde, afastei-me temporariamente, mas o regresso à água — agora na natação adaptada — reacendeu a minha paixão.</p>
+
+        <h2>Sporting e Seleção</h2>
+        <p>Desde 2021, represento o Sporting Clube de Portugal. Tenho crescido no panorama nacional e alcançado objetivos marcantes. Atualmente, compito nas classes S8, SB7 e SM8.</p>
+        <p>Em abril de 2025, representei Portugal pela primeira vez numa prova internacional: o World Para Swimming Series Fuji–Shizuoka, no Japão — um passo decisivo no meu percurso internacional.</p>
+
+        <h2>Além do desporto</h2>
+        <p>A natação adaptada não é só desporto — é uma escola de vida. Cresci como atleta e como pessoa, ao lado de colegas que me ensinaram que o limite, muitas vezes, somos nós que o impomos.</p>
+        <p>No Técnico, aplico a mesma dedicação e resiliência. Nem sempre é fácil conciliar tudo, mas tenho tido o apoio de professores e amigos que fazem a diferença.</p>
+
+        <h2>Mensagem</h2>
+        <p>A minha mensagem para quem está a começar é simples: arrisquem, mesmo com medo. Os desafios existem, mas também existem formas de os ultrapassar. O importante é nunca desistir.</p>
+
+        <h2>Agradecimentos</h2>
+        <p>Gostava de agradecer muito aos meus pais, à minha irmã e aos meus avós, que sempre estiveram lá para mim. Agradeço também ao meu treinador, Rui Gama, e a todo o meu staff, em especial ao preparador físico João Carvalho.</p>
+
+        <blockquote>
+          Se me dessem a escolher nascer com o meu problema ou nascer “normal”, escolheria sempre o caminho que tive e a luta que tenho — aprendi tanto!
+        </blockquote>
+
+      </div>
+
+      <aside class="about-side">
+        <div class="side-card">
+          <h3>Destaques</h3>
+          <ul>
+            <li>Sporting CP + Seleção Nacional</li>
+            <li>Classes: S8 • SB7 • SM8</li>
+            <li>Engenharia Aeroespacial (IST)</li>
+            <li>Fuji–Shizuoka (Japão), 2025</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>Parcerias &amp; Apoio</h3>
+          <p>Se queres apoiar o meu percurso desportivo, fala comigo.</p>
+          <a class="btn" href="contacto.html">Contactar</a>
+        </div>
+      </aside>
     </div>
+  </div>
 </section>
 
-
-
-
-<!-- Rodapé -->
 <footer>
-    <div class="container">
-        <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
-    </div>
+  <div class="container">
+    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+  </div>
 </footer>
 
 </body>
