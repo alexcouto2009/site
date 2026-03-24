@@ -203,6 +203,7 @@ h3{
   color: var(--text);
 }
 
+.badge.gold{ background: #fff3b0; }
 .badge.silver{ background:#f7f7f7; }
 .badge.bronze{ background:#fff6ef; border-color:#ffe2cc; }
 .badge.intl{ background: rgba(10,122,59,0.10); border-color: rgba(10,122,59,0.18); color: var(--accent); }
