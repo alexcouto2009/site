@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário | Alexandre Couto</title>
+  <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <ul><ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="palmares.html">Palmarés</a></li>
+        <li><a href="equipa.html">Equipa</a></li>
+        <li><a href="galeria.html">Fotos</a></li>
+        <li><a class="active" href="calendario.html">Calendário</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="calendar-section">
+    <div class="container">
+      <div class="page-heading">
+        <h1>Próximos Eventos</h1>
+        <p class="subtitle">Calendário com provas, estágios e momentos importantes. Clica num dia assinalado para veres os detalhes do evento.</p>
+      </div>
+
+      <div class="calendar-toolbar">
+        <button class="month-btn" id="prevMonth" aria-label="Mês anterior">&#10094;</button>
+        <div>
+          <p class="kicker">Agenda desportiva</p>
+          <h2 id="monthTitle">Mês</h2>
+        </div>
+        <button class="month-btn" id="nextMonth" aria-label="Mês seguinte">&#10095;</button>
+      </div>
+
+      <div class="calendar-card">
+        <div class="weekdays">
+          <div>Seg</div>
+          <div>Ter</div>
+          <div>Qua</div>
+          <div>Qui</div>
+          <div>Sex</div>
+          <div>Sáb</div>
+          <div>Dom</div>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </div>
+
+      <div class="legend">
+        <span><i class="dot dot-event"></i> Dia com evento</span>
+        <span><i class="dot dot-today"></i> Hoje</span>
+      </div>
+
+      <div class="upcoming-card">
+        <h3>Resumo rápido</h3>
+        <p>Consulta os próximos eventos do calendário competitivo, incluindo provas, locais, datas e detalhes importantes.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="eventModal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeModal" aria-label="Fechar">&times;</button>
+    <div class="modal-media">
+      <img id="modalImage" src="" alt="Imagem do evento">
+    </div>
+    <div class="modal-body">
+      <span class="modal-tag" id="modalTag">Evento</span>
+      <h3 id="modalTitle">Título do evento</h3>
+      <p class="modal-meta" id="modalDate"></p>
+      <p class="modal-meta" id="modalLocation"></p>
+      <p id="modalText"></p>
+      <div class="modal-actions">
+        <a id="modalMap" class="btn" href="#" target="_blank" rel="noopener noreferrer">Ver no mapa</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const monthNames = [
+    'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+  ];
+
+  // EDITA ESTES EVENTOS COM FACILIDADE
+  const events = {
+    '2026-05-07': {
+      title: 'IDM 2026 Berlin - Estágio',
+      tag: 'Estágio',
+      image: 'berlim2.webp',
+      dateText: '7, 8 e 9 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+    },
+     '2026-05-08': {
+      title: 'IDM 2026 Berlin - Estágio',
+      tag: 'Estágio',
+      image: 'berlim2.webp',
+      dateText: '7, 8 e 9 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+    },
+     '2026-05-09': {
+      title: 'IDM 2026 Berlin - Estágio',
+      tag: 'Estágio',
+      image: 'berlim2.webp',
+      dateText: '7, 8 e 9 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+    },
+    '2026-05-10': {
+      title: 'IDM 2026 Berlin',
+      tag: 'IDM 2026 Berlin',
+      image: 'berlim2.webp',
+      dateText: '10, 11 e 12 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim. Prova Internacional.'
+    },
+      '2026-05-11': {
+      title: 'IDM 2026 Berlin',
+      tag: 'IDM 2026 Berlin',
+      image: 'berlim2.webp',
+      dateText: '10, 11 e 12 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim. Prova Internacional.'
+    },
+      '2026-05-12': {
+      title: 'IDM 2026 Berlin',
+      tag: 'IDM 2026 Berlin',
+      image: 'berlim2.webp',
+      dateText: '10, 11 e 12 de maio de 2026',
+      locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
+      map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
+      text: 'IDM 2026 Berlim. Prova Internacional.'
+    },
+    '2026-05-16': {
+      title: 'IV Troféu Baptista Pereira',
+      tag: 'Baptista Pereira',
+      image: 'baptista.jpg',
+      dateText: '16 e 17 de maio de 2026',
+      locationText: 'Vila Franca de Xira',
+      map: 'https://maps.app.goo.gl/mXna3tjFrgi4T7qZ7',
+      text: 'IV Troféu Baptista Pereira'
+    },
+       '2026-05-17': {
+      title: 'IV Troféu Baptista Pereira',
+      tag: 'Baptista Pereira',
+      image: 'baptista.jpg',
+      dateText: '16 e 17 de maio de 2026',
+      locationText: 'Vila Franca de Xira',
+      map: 'https://maps.app.goo.gl/mXna3tjFrgi4T7qZ7',
+      text: 'IV Troféu Baptista Pereira'
+    },
+    '2026-06-20': {
+      title: 'Campeonato Nacional de Verão',
+      tag: 'Nacional',
+      image: 'riomaior.JPG',
+      dateText: '20 a 21 de junho de 2026',
+      locationText: 'Complexo Olímpico de Piscinas de Rio Maior',
+      map: 'https://www.google.com/maps/search/Complexo+Ol%C3%ADmpico+de+Piscinas',
+      text: 'Competição principal do período. Excelente para mostrar a foto da piscina, calendário oficial, provas nadadas e informação importante para seguidores e parceiros.'
+    },
+     '2026-06-21': {
+      title: 'Campeonato Nacional de Verão',
+      tag: 'Nacional',
+      image: 'riomaior.JPG',
+      dateText: '20 a 21 de junho de 2026',
+      locationText: 'Complexo Olímpico de Piscinas de Rio Maior',
+      map: 'https://www.google.com/maps/search/Complexo+Ol%C3%ADmpico+de+Piscinas',
+      text: 'Competição principal do período. Excelente para mostrar a foto da piscina, calendário oficial, provas nadadas e informação importante para seguidores e parceiros.'
+    }
+  };
+
+  const grid = document.getElementById('calendarGrid');
+  const monthTitle = document.getElementById('monthTitle');
+  const prevMonthBtn = document.getElementById('prevMonth');
+  const nextMonthBtn = document.getElementById('nextMonth');
+
+  const modal = document.getElementById('eventModal');
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const closeModalBtn = document.getElementById('closeModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTag = document.getElementById('modalTag');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDate = document.getElementById('modalDate');
+  const modalLocation = document.getElementById('modalLocation');
+  const modalText = document.getElementById('modalText');
+  const modalMap = document.getElementById('modalMap');
+
+  let currentDate = new Date(2026, 4, 1); // Maio 2026 como arranque
+  const today = new Date();
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function formatKey(year, month, day) {
+    return `${year}-${pad(month + 1)}-${pad(day)}`;
+  }
+
+  function openModal(eventData) {
+    modalImage.src = eventData.image;
+    modalImage.alt = eventData.title;
+    modalTag.textContent = eventData.tag;
+    modalTitle.textContent = eventData.title;
+    modalDate.textContent = eventData.dateText;
+    modalLocation.textContent = eventData.locationText;
+    modalText.textContent = eventData.text;
+    modalMap.href = eventData.map;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  function renderCalendar() {
+    grid.innerHTML = '';
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    monthTitle.textContent = `${monthNames[month]} ${year}`;
+
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    let startOffset = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1; // semana começa segunda
+
+    for (let i = 0; i < startOffset; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'day empty';
+      grid.appendChild(empty);
+    }
+
+    for (let day = 1; day <= lastDay.getDate(); day++) {
+      const dayEl = document.createElement('button');
+      const key = formatKey(year, month, day);
+      const eventData = events[key];
+      const isToday = year === today.getFullYear() && month === today.getMonth() && day === today.getDate();
+
+      dayEl.className = 'day';
+      if (eventData) dayEl.classList.add('has-event');
+      if (isToday) dayEl.classList.add('today');
+
+      dayEl.innerHTML = `<span class="day-number">${day}</span>${eventData ? `<span class="event-label">${eventData.tag}</span>` : ''}`;
+
+      if (eventData) {
+        dayEl.addEventListener('click', () => openModal(eventData));
+      } else {
+        dayEl.disabled = true;
+      }
+
+      grid.appendChild(dayEl);
+    }
+  }
+
+  prevMonthBtn.addEventListener('click', () => {
+    currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+    renderCalendar();
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  renderCalendar();
+</script>
+</body>
+</html>
