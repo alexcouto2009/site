@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos | Alexandre Couto</title>
+  <link rel="stylesheet" href="galeria.css">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="palmares.html">Palmarés</a></li>
+        <li><a href="equipa.html">Equipa</a></li>
+        <li><a class="active" href="galeria.html">Fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-heading">
+        <h1>Fotos</h1>
+        <p class="subtitle">Alguns dos momentos mais especiais do meu percurso dentro e fora de água.</p>
+      </div>
+
+      <div class="slideshow-card">
+        <div class="slideshow" id="slideshow">
+          <article class="slide active">
+            <img src="gala26.JPG" alt="Atleta do Ano 2025 em Santo Tirso">
+            <div class="slide-caption">
+              <span class="slide-tag">Reconhecimento</span>
+              <h2>Atleta do Ano 2025</h2>
+              <p>Abril 2026 · Santo Tirso</p>
+            </div>
+          </article>
+
+          <article class="slide">
+            <img src="porto_26.jpg" alt="Troféu Cidade do Porto 2026">
+            <div class="slide-caption">
+              <span class="slide-tag">Competição</span>
+              <h2>Troféu Cidade do Porto 2026</h2>
+              <p>Março 2026 · Porto</p>
+            </div>
+          </article>
+
+          <article class="slide">
+            <img src="nacional_26.JPG" alt="Campeonato Nacional de Inverno 2026">
+            <div class="slide-caption">
+              <span class="slide-tag">Nacional</span>
+              <h2>Campeonato Nacional de Inverno</h2>
+              <p>Março 2026 · Vila Franca de Xira</p>
+            </div>
+          </article>
+
+          <article class="slide">
+            <img src="pt.JPG" alt="Torneio Nacional 2026">
+            <div class="slide-caption">
+              <span class="slide-tag">Pódio</span>
+              <h2>Torneio Nacional 2026</h2>
+              <p>Janeiro 2026 · Ponte de Sor</p>
+            </div>
+          </article>
+
+          <article class="slide">
+            <img src="equipa.jpg" alt="Campeonato Nacional de Verão 2025 com a equipa">
+            <div class="slide-caption">
+              <span class="slide-tag">Equipa</span>
+              <h2>Campeonato Nacional de Verão 2025</h2>
+              <p>Junho 2025 · Rio Maior</p>
+            </div>
+          </article>
+
+          <article class="slide">
+            <img src="fuji_7.jpg" alt="World Para Swimming Series Fuji–Shizuoka">
+            <div class="slide-caption">
+              <span class="slide-tag">Internacional</span>
+              <h2>World Para Swimming Series</h2>
+              <p>Abril 2025 · Fuji–Shizuoka</p>
+            </div>
+          </article>
+
+          <button class="nav prev" aria-label="Foto anterior">&#10094;</button>
+          <button class="nav next" aria-label="Foto seguinte">&#10095;</button>
+        </div>
+
+        <div class="dots" id="dots" aria-label="Indicadores do slideshow"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsWrap = document.getElementById('dots');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let current = 0;
+  let timer;
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = index === 0 ? 'dot active' : 'dot';
+    dot.setAttribute('aria-label', `Ir para slide ${index + 1}`);
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      restartAuto();
+    });
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  function startAuto() {
+    timer = setInterval(nextSlide, 5000);
+  }
+
+  function restartAuto() {
+    clearInterval(timer);
+    startAuto();
+  }
+
+  nextBtn.addEventListener('click', () => { nextSlide(); restartAuto(); });
+  prevBtn.addEventListener('click', () => { prevSlide(); restartAuto(); });
+
+  startAuto();
+</script>
+</body>
+</html>
