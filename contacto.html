@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contacto | Alexandre Couto</title>
-  <link rel="stylesheet" href="contacto.css">
+  <meta name="description" content="Contacto oficial de Alexandre Couto para mensagens, imprensa, entrevistas, parcerias e redes sociais.">
+
+  <link rel="stylesheet" href="contacto2.css">
 </head>
 
 <body>
@@ -18,7 +21,9 @@
         <li><a href="palmares.html">Palmarés</a></li>
         <li><a href="equipa.html">Equipa</a></li>
         <li><a href="galeria.html">Fotos</a></li>
-              <li><a href="calendario.html">Calendário</a></li>
+        <li><a href="calendario.html">Calendário</a></li>
+        <li><a href="parcerias.html">Parcerias</a></li>
+        <li><a href="media.html">Media</a></li>
         <li><a class="active" href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -26,66 +31,182 @@
 </header>
 
 <main>
-  <section class="contact-section">
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="hero-grid-overlay"></div>
+
     <div class="container">
-      <h1>Contacto</h1>
-      <p class="subtitle">Envia-me uma mensagem por aqui ou fala comigo pelas redes sociais.</p>
+      <div class="hero-content">
+        <p class="kicker">Contacto</p>
+        <h1>Vamos falar?</h1>
+        <p>
+          Para mensagens, imprensa, entrevistas, parcerias, eventos ou projetos ligados ao desporto
+          e à área aeroespacial, podes entrar em contacto comigo por aqui.
+        </p>
 
-      <div class="contact-grid">
-        <!-- Form -->
-        <div class="contact-card">
-          <h2>Enviar mensagem</h2>
-
-          <!-- FORM: troca SEU_ID_AQUI pelo ID do Formspree -->
-          <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
-
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
-
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem" required></textarea>
-
-            <button type="submit" class="btn">Enviar</button>
-          </form>
-
-          <p class="form-note">
-            Ao enviar, a tua mensagem será encaminhada para o meu email.
-          </p>
+        <div class="hero-actions">
+          <a href="#formulario" class="btn-primary">Enviar mensagem</a>
+          <a href="parcerias.html" class="btn-glass">Parcerias</a>
         </div>
-
-        <!-- Social -->
-        <aside class="contact-card">
-          <h2>Redes sociais</h2>
-          <p class="muted">Também podes contactar-me diretamente aqui:</p>
-
-          <div class="social-links">
-            <a class="social-item" href="https://www.linkedin.com/in/alexandre-couto-2a57601a1/" target="_blank" rel="noopener noreferrer">
-              <img src="linkedin.png" alt="LinkedIn" class="social-logo">
-              <span>LinkedIn</span>
-            </a>
-
-            <a class="social-item" href="https://www.instagram.com/couto.scp/" target="_blank" rel="noopener noreferrer">
-              <img src="instagram.png" alt="Instagram" class="social-logo">
-              <span>Instagram</span>
-            </a>
-          </div>
-
-          <!-- opcional: email visível (se quiseres) -->
-          <!-- <div class="direct">
-            <h3>Contacto direto</h3>
-            <p><a href="mailto:alexandre.couto@tecnico.ulisboa.pt">alexandre.couto@tecnico.ulisboa.pt</a></p>
-          </div> -->
-        </aside>
       </div>
     </div>
   </section>
+
+  <!-- CONTACTO -->
+  <section class="contact-section" id="formulario">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Entrar em contacto</p>
+        <h2>Mensagem direta ou redes sociais</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-card form-card">
+          <span class="card-label">Mensagem</span>
+          <h3>Enviar mensagem</h3>
+          <p class="card-text">
+            Usa este formulário para pedidos de contacto, entrevistas, parcerias, eventos ou outras oportunidades.
+          </p>
+
+          <!-- Troca SEU_ID_AQUI pelo ID do Formspree -->
+          <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="O teu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="O teu e-mail" required>
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecionar assunto</option>
+                <option value="Parceria">Parceria</option>
+                <option value="Media / Imprensa">Media / Imprensa</option>
+                <option value="Entrevista">Entrevista</option>
+                <option value="Evento">Evento</option>
+                <option value="Mensagem geral">Mensagem geral</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Escreve a tua mensagem" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar mensagem</button>
+          </form>
+
+          <p class="form-note">
+            Ao enviar, a mensagem será encaminhada para o meu email.
+          </p>
+        </div>
+
+        <!-- INFO / SOCIAL -->
+        <aside class="contact-card info-card">
+          <span class="card-label">Redes sociais</span>
+          <h3>Outras formas de contacto</h3>
+          <p class="card-text">
+            Também podes acompanhar o meu percurso ou contactar diretamente através das redes sociais.
+          </p>
+
+          <div class="social-links">
+
+            <a class="social-item" href="https://www.linkedin.com/in/alexandre-couto-2a57601a1/" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">
+                <img src="linkedin.png" alt="LinkedIn">
+              </div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Perfil profissional</span>
+              </div>
+            </a>
+
+            <a class="social-item" href="https://www.instagram.com/couto.scp/" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">
+                <img src="instagram.png" alt="Instagram">
+              </div>
+              <div>
+                <strong>Instagram</strong>
+                <span>Acompanhar o percurso</span>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="contact-purpose">
+            <h4>Contacto para:</h4>
+
+            <ul>
+              <li>Parcerias e apoios</li>
+              <li>Media e imprensa</li>
+              <li>Entrevistas e podcasts</li>
+              <li>Eventos e presença institucional</li>
+              <li>Projetos ligados ao desporto e inclusão</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA MEDIA / PARCERIAS -->
+  <section class="contact-options">
+    <div class="container">
+      <div class="options-grid">
+
+        <a href="parcerias.html" class="option-card">
+          <span>🤝</span>
+          <h3>Parcerias</h3>
+          <p>Conhece as formas de apoiar o meu percurso desportivo.</p>
+        </a>
+
+        <a href="media.html" class="option-card">
+          <span>🎙️</span>
+          <h3>Media</h3>
+          <p>Entrevistas, frases, destaques e presença pública.</p>
+        </a>
+
+        <a href="palmares2.html" class="option-card">
+          <span>🏅</span>
+          <h3>Palmarés</h3>
+          <p>Resultados, internacionalizações, medalhas e recordes.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Contacto para imprensa, parcerias e projetos</h2>
+      <p>
+        Seja para comunicar uma história, criar uma parceria ou desenvolver um projeto,
+        estou disponível para conversar.
+      </p>
+
+      <div class="cta-actions">
+        <a href="#formulario" class="btn-primary">Enviar mensagem</a>
+        <a href="media.html" class="btn-glass-dark">Ver media</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Alexandre Couto. Todos os direitos reservados.</p>
   </div>
 </footer>
 

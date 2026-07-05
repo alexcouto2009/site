@@ -3,20 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Calendário | Alexandre Couto</title>
-  <link rel="stylesheet" href="calendario.css">
+  <meta name="description" content="Calendário competitivo de Alexandre Couto: provas, estágios, eventos e momentos importantes do percurso desportivo.">
+
+  <link rel="stylesheet" href="calendario2.css">
 </head>
+
 <body>
+
 <header>
   <div class="container">
     <nav>
-      <ul><ul>
+      <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="palmares.html">Palmarés</a></li>
         <li><a href="equipa.html">Equipa</a></li>
         <li><a href="galeria.html">Fotos</a></li>
         <li><a class="active" href="calendario.html">Calendário</a></li>
+        <li><a href="parcerias.html">Parcerias</a></li>
+        <li><a href="media.html">Media</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -24,63 +31,154 @@
 </header>
 
 <main>
-  <section class="calendar-section">
+
+  <!-- HERO -->
+  <section class="calendar-hero">
+    <div class="hero-grid-overlay"></div>
+
     <div class="container">
-      <div class="page-heading">
-        <h1>Próximos Eventos</h1>
-        <p class="subtitle">Calendário com provas, estágios e momentos importantes. Clica num dia assinalado para veres os detalhes do evento.</p>
-      </div>
+      <div class="hero-content">
+        <p class="kicker">Agenda competitiva</p>
+        <h1>Calendário</h1>
+        <p>
+          Provas, estágios e momentos importantes do percurso desportivo.
+          Clica nos dias assinalados para veres detalhes, local e informação do evento.
+        </p>
 
-      <div class="calendar-toolbar">
-        <button class="month-btn" id="prevMonth" aria-label="Mês anterior">&#10094;</button>
-        <div>
-          <p class="kicker">Agenda desportiva</p>
-          <h2 id="monthTitle">Mês</h2>
+        <div class="hero-actions">
+          <a href="#calendario" class="btn-primary">Ver calendário</a>
+          <a href="#proximos" class="btn-glass">Próximos eventos</a>
         </div>
-        <button class="month-btn" id="nextMonth" aria-label="Mês seguinte">&#10095;</button>
-      </div>
-
-      <div class="calendar-card">
-        <div class="weekdays">
-          <div>Seg</div>
-          <div>Ter</div>
-          <div>Qua</div>
-          <div>Qui</div>
-          <div>Sex</div>
-          <div>Sáb</div>
-          <div>Dom</div>
-        </div>
-        <div id="calendarGrid" class="calendar-grid"></div>
-      </div>
-
-      <div class="legend">
-        <span><i class="dot dot-event"></i> Dia com evento</span>
-        <span><i class="dot dot-today"></i> Hoje</span>
-      </div>
-
-      <div class="upcoming-card">
-        <h3>Resumo rápido</h3>
-        <p>Consulta os próximos eventos do calendário competitivo, incluindo provas, locais, datas e detalhes importantes.</p>
       </div>
     </div>
   </section>
+
+  <!-- CALENDÁRIO -->
+  <section class="calendar-section" id="calendario">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Eventos</p>
+        <h2>Calendário competitivo</h2>
+        <p class="section-subtitle">
+          Navega entre os meses e seleciona um dia com evento para consultar os detalhes.
+        </p>
+      </div>
+
+      <div class="calendar-layout">
+
+        <div class="calendar-main">
+
+          <div class="calendar-toolbar">
+            <button class="month-btn" id="prevMonth" aria-label="Mês anterior">&#10094;</button>
+
+            <div class="month-info">
+              <p class="kicker-small">Agenda desportiva</p>
+              <h3 id="monthTitle">Mês</h3>
+            </div>
+
+            <button class="month-btn" id="nextMonth" aria-label="Mês seguinte">&#10095;</button>
+          </div>
+
+          <div class="calendar-card">
+            <div class="weekdays">
+              <div>Seg</div>
+              <div>Ter</div>
+              <div>Qua</div>
+              <div>Qui</div>
+              <div>Sex</div>
+              <div>Sáb</div>
+              <div>Dom</div>
+            </div>
+
+            <div id="calendarGrid" class="calendar-grid"></div>
+          </div>
+
+          <div class="legend">
+            <span><i class="dot dot-event"></i> Dia com evento</span>
+            <span><i class="dot dot-today"></i> Hoje</span>
+          </div>
+
+        </div>
+
+        <aside class="calendar-side" id="proximos">
+          <span class="side-label">Resumo rápido</span>
+          <h3>Próximos eventos</h3>
+          <p>
+            Consulta aqui as provas e momentos importantes do calendário competitivo.
+          </p>
+
+          <div class="event-list">
+
+            <button class="event-summary" data-event-key="2026-05-07">
+              <span>7–9 maio 2026</span>
+              <strong>IDM 2026 Berlin — Estágio</strong>
+              <small>Berlim · Estágio internacional</small>
+            </button>
+
+            <button class="event-summary" data-event-key="2026-05-10">
+              <span>10–12 maio 2026</span>
+              <strong>IDM 2026 Berlin</strong>
+              <small>Berlim · Prova internacional</small>
+            </button>
+
+            <button class="event-summary" data-event-key="2026-05-16">
+              <span>16–17 maio 2026</span>
+              <strong>IV Troféu Baptista Pereira</strong>
+              <small>Vila Franca de Xira</small>
+            </button>
+
+            <button class="event-summary" data-event-key="2026-06-20">
+              <span>20–21 junho 2026</span>
+              <strong>Campeonato Nacional de Verão</strong>
+              <small>Rio Maior</small>
+            </button>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Acompanhar o percurso, prova a prova.</h2>
+      <p>
+        Cada evento é uma oportunidade para competir, evoluir e representar.
+        Consulta também os resultados no palmarés.
+      </p>
+
+      <div class="cta-actions">
+        <a href="palmares2.html" class="btn-primary">Ver palmarés</a>
+        <a href="media.html" class="btn-glass-dark">Ver media</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
+<!-- MODAL -->
 <div class="modal" id="eventModal" aria-hidden="true">
   <div class="modal-backdrop" id="modalBackdrop"></div>
+
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="closeModal" aria-label="Fechar">&times;</button>
+
     <div class="modal-media">
       <img id="modalImage" src="" alt="Imagem do evento">
     </div>
+
     <div class="modal-body">
       <span class="modal-tag" id="modalTag">Evento</span>
       <h3 id="modalTitle">Título do evento</h3>
       <p class="modal-meta" id="modalDate"></p>
       <p class="modal-meta" id="modalLocation"></p>
       <p id="modalText"></p>
+
       <div class="modal-actions">
-        <a id="modalMap" class="btn" href="#" target="_blank" rel="noopener noreferrer">Ver no mapa</a>
+        <a id="modalMap" class="btn-modal" href="#" target="_blank" rel="noopener noreferrer">Ver no mapa</a>
       </div>
     </div>
   </div>
@@ -88,7 +186,7 @@
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Alexandre Couto. Todos os direitos reservados.</p>
   </div>
 </footer>
 
@@ -98,7 +196,6 @@
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
   ];
 
-  // EDITA ESTES EVENTOS COM FACILIDADE
   const events = {
     '2026-05-07': {
       title: 'IDM 2026 Berlin - Estágio',
@@ -107,71 +204,74 @@
       dateText: '7, 8 e 9 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+      text: 'Estágio integrado na participação internacional no IDM 2026 Berlin.'
     },
-     '2026-05-08': {
+    '2026-05-08': {
       title: 'IDM 2026 Berlin - Estágio',
       tag: 'Estágio',
       image: 'berlim2.webp',
       dateText: '7, 8 e 9 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+      text: 'Estágio integrado na participação internacional no IDM 2026 Berlin.'
     },
-     '2026-05-09': {
+    '2026-05-09': {
       title: 'IDM 2026 Berlin - Estágio',
       tag: 'Estágio',
       image: 'berlim2.webp',
       dateText: '7, 8 e 9 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim - Estágio. Prova Internacional.'
+      text: 'Estágio integrado na participação internacional no IDM 2026 Berlin.'
     },
+
     '2026-05-10': {
       title: 'IDM 2026 Berlin',
-      tag: 'IDM 2026 Berlin',
+      tag: 'Internacional',
       image: 'berlim2.webp',
       dateText: '10, 11 e 12 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim. Prova Internacional.'
+      text: 'Participação no IDM 2026 Berlin, prova internacional.'
     },
-      '2026-05-11': {
+    '2026-05-11': {
       title: 'IDM 2026 Berlin',
-      tag: 'IDM 2026 Berlin',
+      tag: 'Internacional',
       image: 'berlim2.webp',
       dateText: '10, 11 e 12 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim. Prova Internacional.'
+      text: 'Participação no IDM 2026 Berlin, prova internacional.'
     },
-      '2026-05-12': {
+    '2026-05-12': {
       title: 'IDM 2026 Berlin',
-      tag: 'IDM 2026 Berlin',
+      tag: 'Internacional',
       image: 'berlim2.webp',
       dateText: '10, 11 e 12 de maio de 2026',
       locationText: 'Berlim - Schwimm- und Sprunghalle im Europasportpark',
       map: 'https://maps.app.goo.gl/iLriv9XLCkPUHeuJ8',
-      text: 'IDM 2026 Berlim. Prova Internacional.'
+      text: 'Participação no IDM 2026 Berlin, prova internacional.'
     },
+
     '2026-05-16': {
       title: 'IV Troféu Baptista Pereira',
-      tag: 'Baptista Pereira',
+      tag: 'Competição',
       image: 'baptista.jpg',
       dateText: '16 e 17 de maio de 2026',
       locationText: 'Vila Franca de Xira',
       map: 'https://maps.app.goo.gl/mXna3tjFrgi4T7qZ7',
-      text: 'IV Troféu Baptista Pereira'
+      text: 'IV Troféu Baptista Pereira, competição nacional em Vila Franca de Xira.'
     },
-       '2026-05-17': {
+    '2026-05-17': {
       title: 'IV Troféu Baptista Pereira',
-      tag: 'Baptista Pereira',
+      tag: 'Competição',
       image: 'baptista.jpg',
       dateText: '16 e 17 de maio de 2026',
       locationText: 'Vila Franca de Xira',
       map: 'https://maps.app.goo.gl/mXna3tjFrgi4T7qZ7',
-      text: 'IV Troféu Baptista Pereira'
+      text: 'IV Troféu Baptista Pereira, competição nacional em Vila Franca de Xira.'
     },
+
     '2026-06-20': {
       title: 'Campeonato Nacional de Verão',
       tag: 'Nacional',
@@ -179,16 +279,16 @@
       dateText: '20 a 21 de junho de 2026',
       locationText: 'Complexo Olímpico de Piscinas de Rio Maior',
       map: 'https://www.google.com/maps/search/Complexo+Ol%C3%ADmpico+de+Piscinas',
-      text: 'Competição principal do período. Excelente para mostrar a foto da piscina, calendário oficial, provas nadadas e informação importante para seguidores e parceiros.'
+      text: 'Campeonato Nacional de Verão, uma das competições principais do período competitivo.'
     },
-     '2026-06-21': {
+    '2026-06-21': {
       title: 'Campeonato Nacional de Verão',
       tag: 'Nacional',
       image: 'riomaior.JPG',
       dateText: '20 a 21 de junho de 2026',
       locationText: 'Complexo Olímpico de Piscinas de Rio Maior',
       map: 'https://www.google.com/maps/search/Complexo+Ol%C3%ADmpico+de+Piscinas',
-      text: 'Competição principal do período. Excelente para mostrar a foto da piscina, calendário oficial, provas nadadas e informação importante para seguidores e parceiros.'
+      text: 'Campeonato Nacional de Verão, uma das competições principais do período competitivo.'
     }
   };
 
@@ -208,10 +308,12 @@
   const modalText = document.getElementById('modalText');
   const modalMap = document.getElementById('modalMap');
 
-  let currentDate = new Date(2026, 4, 1); // Maio 2026 como arranque
+  let currentDate = new Date(2026, 4, 1);
   const today = new Date();
 
-  function pad(n) { return String(n).padStart(2, '0'); }
+  function pad(n) {
+    return String(n).padStart(2, '0');
+  }
 
   function formatKey(year, month, day) {
     return `${year}-${pad(month + 1)}-${pad(day)}`;
@@ -226,6 +328,7 @@
     modalLocation.textContent = eventData.locationText;
     modalText.textContent = eventData.text;
     modalMap.href = eventData.map;
+
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -239,13 +342,14 @@
 
   function renderCalendar() {
     grid.innerHTML = '';
+
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
     monthTitle.textContent = `${monthNames[month]} ${year}`;
 
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
-    let startOffset = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1; // semana começa segunda
+    const startOffset = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
 
     for (let i = 0; i < startOffset; i++) {
       const empty = document.createElement('div');
@@ -257,13 +361,20 @@
       const dayEl = document.createElement('button');
       const key = formatKey(year, month, day);
       const eventData = events[key];
-      const isToday = year === today.getFullYear() && month === today.getMonth() && day === today.getDate();
+
+      const isToday =
+        year === today.getFullYear() &&
+        month === today.getMonth() &&
+        day === today.getDate();
 
       dayEl.className = 'day';
       if (eventData) dayEl.classList.add('has-event');
       if (isToday) dayEl.classList.add('today');
 
-      dayEl.innerHTML = `<span class="day-number">${day}</span>${eventData ? `<span class="event-label">${eventData.tag}</span>` : ''}`;
+      dayEl.innerHTML = `
+        <span class="day-number">${day}</span>
+        ${eventData ? `<span class="event-label">${eventData.tag}</span>` : ''}
+      `;
 
       if (eventData) {
         dayEl.addEventListener('click', () => openModal(eventData));
@@ -287,11 +398,20 @@
 
   closeModalBtn.addEventListener('click', closeModal);
   modalBackdrop.addEventListener('click', closeModal);
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
 
+  document.querySelectorAll('.event-summary').forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.getAttribute('data-event-key');
+      if (events[key]) openModal(events[key]);
+    });
+  });
+
   renderCalendar();
 </script>
+
 </body>
 </html>

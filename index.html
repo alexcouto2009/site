@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexandre Couto | Início</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Site oficial de Alexandre Couto, atleta de natação adaptada, internacional português e estudante ligado à engenharia aeroespacial.">
+
+  <link rel="stylesheet" href="home-novo2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -15,11 +17,13 @@
     <nav>
       <ul>
         <li><a class="active" href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+       <li><a href="sobre.html">Sobre</a></li>
         <li><a href="palmares.html">Palmarés</a></li>
         <li><a href="equipa.html">Equipa</a></li>
-         <li><a href="galeria.html">Fotos</a></li>
+        <li><a href="galeria.html">Fotos</a></li>
         <li><a href="calendario.html">Calendário</a></li>
+        <li><a href="parcerias.html">Parcerias</a></li>
+        <li><a href="media.html">Media</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -27,171 +31,189 @@
 </header>
 
 <main>
+
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="kicker">Natação Adaptada</p>
-        <h1>ALEXANDRE COUTO</h1>
-        <p class="subtitle">Atleta do Sporting Clube de Portugal</p>
+    <div class="hero-grid-overlay"></div>
 
-        <div class="hero-actions">
-          <a class="btn" href="sobre.html">Conhecer história</a>
-          <a class="btn btn-ghost" href="contacto.html">Contactar</a>
-        </div>
+    <div class="container hero-content">
+      <p class="kicker">Natação Adaptada · Portugal · Engenharia Aeroespacial</p>
+
+      <h1>Alexandre <span>Couto</span></h1>
+
+      <p class="hero-subtitle">
+        Atleta de natação adaptada, internacional português e estudante de Engenharia Aeroespacial.
+        Um percurso construído com superação, dedicação e ambição.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="palmares.html">Ver palmarés</a>
+        <a class="btn btn-glass" href="parcerias.html">Apoia este percurso</a>
       </div>
 
-      <div class="hero-image">
-        <img src="mariposa.png" alt="Alexandre Couto" class="hero-img">
+      <div class="hero-stats">
+        <div class="stat-box">
+          <strong>2</strong>
+          <span>Internacionalizações</span>
+        </div>
+        <div class="stat-box">
+          <strong>41</strong>
+          <span>Pódios nacionais</span>
+        </div>
+        <div class="stat-box">
+          <strong>1</strong>
+          <span>Final internacional</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- EVENTOS RECENTES -->
+  <!-- IDENTIDADE -->
+  <section class="identity-section">
+    <div class="container">
+      <div class="identity-grid">
+
+        <div class="identity-card">
+          <span class="identity-icon">🏊</span>
+          <h2>Na água</h2>
+          <p>
+            A natação adaptada é o espaço onde transformo esforço em evolução,
+            onde posso ser eu livremente.
+          </p>
+        </div>
+
+        <div class="identity-card featured">
+          <span class="identity-icon">🚀</span>
+          <h2>Na engenharia</h2>
+          <p>
+            A Engenharia Aeroespacial traz a precisão, o detalhe e a procura constante por desempenho.
+            Tal como no desporto, cada detalhe conta. É o meu sonho desde que me conheço.
+          </p>
+        </div>
+
+        <div class="identity-card">
+          <span class="identity-icon">🔥</span>
+          <h2>No percurso</h2>
+          <p>
+            O objetivo é continuar a evoluir, competir e mostrar que os limites também se treinam. 
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUES -->
   <section class="section">
     <div class="container">
-      <h2>Eventos recentes <span class="highlight">| as últimas provas</span></h2>
-      <p class="muted">Alguns momentos mais recentes do meu percurso competitivo.</p>
+      <div class="section-heading">
+        <p class="eyebrow">Últimos destaques</p>
+        <h2>Momentos que marcaram o percurso recente</h2>
+      </div>
 
-      <div class="events-grid">
+      <div class="featured-grid">
 
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="idm1.JPG" alt="IDM 2026 - Berlim">
-          </div>
-          <div class="event-body">
-            <h3>IDM 2026 - Berlim</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Maio 2026 · Berlim</p>
-            <div class="badges">
-              <span class="badge intl">2.º Evento Internacional</span>
-              <span class="badge gold"><i class="fas fa-medal"></i> 1ª Final Internacional</span>
-            </div>
+        <article class="featured-card large">
+          <img src="idm1.JPG" alt="IDM 2026 - Berlim">
+          <div class="featured-overlay">
+            <span class="tag international">Internacional</span>
+            <h3>IDM 2026 · Berlim</h3>
+            <p>2.ª internacionalização, primeira final internacional e marca de destaque mundial.</p>
           </div>
         </article>
-        
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="gala26.JPG" alt="Atleta do Ano 2025">
-          </div>
-          <div class="event-body">
+
+        <article class="featured-card">
+          <img src="gala26.JPG" alt="Atleta do Ano 2025">
+          <div class="featured-overlay">
+            <span class="tag gold">Reconhecimento</span>
             <h3>Atleta do Ano 2025</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> abril 2026 · Santo Tirso</p>
+            <p>Desporto Adaptado · Santo Tirso</p>
           </div>
         </article>
 
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="porto_26.jpg" alt="Troféu Cidade do Porto 26">
-          </div>
-          <div class="event-body">
-            <h3>Troféu Cidade do Porto 2026</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Março 2026 · Porto</p>
-            <div class="badges">
-              <span class="badge gold"><i class="fas fa-medal"></i> Melhor Nadador S1-S10</span>
-              <span class="badge gold"><i class="fas fa-medal"></i> 100B 200E 50L · Ouro</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="nacional_26.JPG" alt="Campeonato Nacional Inverno 26">
-          </div>
-          <div class="event-body">
-            <h3>Campeão Nacional Inverno 2026</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Março 2026 · VF Xira</p>
-            <div class="badges">
-              <span class="badge gold"><i class="fas fa-medal"></i> 100B SB7· Ouro</span>
-              <span class="badge silver"><i class="fas fa-medal"></i> 50L 100L 100C · Prata</span>
-              <span class="badge silver"><i class="fas fa-medal"></i> Equipas · Prata</span>
-            </div>
-          </div>
-        </article>
-
-            <article class="event-card">
-          <div class="event-photo">
-            <img src="pt.JPG" alt="Torneio Nacional 26">
-          </div>
-          <div class="event-body">
-            <h3>Torneio Nacional 2026</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Janeiro 2026 · Ponte de Sor</p>
-            <div class="badges">
-              <span class="badge gold"><i class="fas fa-medal"></i> 100B SB7· Ouro</span>
-              <span class="badge silver"><i class="fas fa-medal"></i> 50L 100M 100L S8· Prata</span>
-              <span class="badge bronze"><i class="fas fa-medal"></i> 100L Geral · Bronze</span>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="equipa.jpg" alt="Campeonato Nacional Verão 25">
-          </div>
-          <div class="event-body">
-            <h3>Campeonato Nacional Verão 2025</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Junho 2025 · Rio Maior</p>
-            <div class="badges">
-              <span class="badge silver"><i class="fas fa-medal"></i> Equipas · Prata</span>
-              <span class="badge silver"><i class="fas fa-medal"></i> 100B · Prata</span>
-              <span class="badge bronze"><i class="fas fa-medal"></i> 50L/100C · Bronze</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <div class="event-photo">
-            <img src="fuji_7.jpg" alt="World Para Swimming Series">
-          </div>
-          <div class="event-body">
-            <h3>World Para Swimming Series</h3>
-            <p class="event-meta"><i class="fa-regular fa-calendar"></i> Abril 2025 · Fuji–Shizuoka</p>
-            <div class="badges">
-              <span class="badge intl">1.º Evento Internacional</span>
-            </div>
+        <article class="featured-card">
+          <img src="porto_26.jpg" alt="Troféu Cidade do Porto 2026">
+          <div class="featured-overlay">
+            <span class="tag gold">Destaque</span>
+            <h3>Troféu Cidade do Porto</h3>
+            <p>Melhor nadador S1-S10</p>
           </div>
         </article>
 
       </div>
+
+      <div class="center-action">
+        <a href="palmares.html" class="btn-dark">Ver resultados completos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        “A vida é mais bonita do que os problemas todos que possamos ter.”
+      </blockquote>
+      <p>Alexandre Couto</p>
     </div>
   </section>
 
   <!-- APOIOS -->
-  <section class="section section-soft">
+  <section class="support-section">
     <div class="container">
-      <h2>Conheça os meus <span class="highlight">apoios</span></h2>
-      <p class="muted">Obrigado a quem acredita e caminha comigo.</p>
+      <div class="section-heading light">
+        <p class="eyebrow">Parceiros e apoios</p>
+        <h2>Quem acredita neste percurso</h2>
+        <p class="section-subtitle">
+          Obrigado a quem caminha comigo e ajuda a tornar possível continuar a competir, evoluir e representar.
+        </p>
+      </div>
 
       <div class="brands-grid">
-        <a href="https://www.sporting.pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
-          <img src="SCP.png" alt="Sporting Clube de Portugal">
-        </a>
+
         <a href="https://www.oriontechnik.com" target="_blank" rel="noopener noreferrer" class="brand-logo">
           <img src="orion.png" alt="ORION TECHNICK">
         </a>
+
         <a href="https://criticalsoftware.com/pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
           <img src="critical3.jpg" alt="Critical Software">
-           </a>
-        <a href="https://www.standvirtual.com" target="_blank" rel="noopener noreferrer" class="brand-logo">
-          <img src="stand2.jpeg" alt="Standvirtual">
         </a>
-          <a href="https://www.zumub.com/PT/" target="_blank" rel="noopener noreferrer" class="brand-logo">
+
+        <a href="https://www.zumub.com/PT/" target="_blank" rel="noopener noreferrer" class="brand-logo">
           <img src="zumub.png" alt="Zumub">
-           </a>
-        <a href="https://aquainstinct.com" target="_blank" rel="noopener noreferrer" class="brand-logo">
-          <img src="aqua.png" alt="Aqua Instinct">
         </a>
+
         <a href="https://www.facebook.com/thefusion.pt" target="_blank" rel="noopener noreferrer" class="brand-logo">
           <img src="thefusion.jpeg" alt="The Fusion">
         </a>
       </div>
+
+      <div class="center-action">
+        <a href="parcerias.html" class="btn btn-primary">Conhecer parcerias</a>
+      </div>
     </div>
   </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Queres acompanhar ou apoiar este percurso?</h2>
+      <p>
+       Queres saber um pouco mais deste percurso? Não hesites em contactar!
+      </p>
+
+      <div class="cta-actions">
+        <a href="contacto.html" class="btn btn-primary">Contactar</a>
+        <a href="sobre.html" class="btn btn-outline-dark">Conhecer história</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Alexandre Couto. Todos os direitos reservados.</p>
   </div>
 </footer>
 

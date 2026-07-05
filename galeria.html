@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Fotos | Alexandre Couto</title>
-  <link rel="stylesheet" href="galeria.css">
+  <meta name="description" content="Galeria de fotos de Alexandre Couto: competições, internacionalizações, prémios, equipa e momentos marcantes do percurso.">
+
+  <link rel="stylesheet" href="galeria2.css">
 </head>
 
 <body>
+
 <header>
   <div class="container">
     <nav>
@@ -17,7 +21,9 @@
         <li><a href="palmares.html">Palmarés</a></li>
         <li><a href="equipa.html">Equipa</a></li>
         <li><a class="active" href="galeria.html">Fotos</a></li>
-          <li><a href="calendario.html">Calendário</a></li>
+        <li><a href="calendario.html">Calendário</a></li>
+        <li><a href="parcerias.html">Parcerias</a></li>
+        <li><a href="media.html">Media</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -25,20 +31,44 @@
 </header>
 
 <main>
-  <section class="gallery-section">
+
+  <!-- HERO -->
+  <section class="gallery-hero">
+    <div class="hero-grid-overlay"></div>
+
     <div class="container">
-      <div class="gallery-heading">
-        <h1>Fotos</h1>
-        <p class="subtitle">Alguns dos momentos mais especiais do meu percurso.</p>
+      <div class="hero-content">
+        <p class="kicker">Galeria</p>
+        <h1>Momentos que contam o percurso.</h1>
+        <p>
+          Competições, internacionalizações, prémios, equipa e memórias que fazem parte
+          da minha história dentro e fora de água.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#slideshow" class="btn-primary">Ver slideshow</a>
+          <a href="#momentos" class="btn-glass">Ver momentos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow-section" id="slideshow">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Em destaque</p>
+        <h2>Alguns momentos especiais</h2>
       </div>
 
       <div class="slideshow-card">
-        <div class="slideshow" id="slideshow">
+        <div class="slideshow">
 
           <article class="slide active">
             <img src="idm1.JPG" alt="IDM Berlim 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag international">Competição internacional</span>
               <h2>IDM Berlim 2026</h2>
               <p>Maio 2026 · Berlim</p>
             </div>
@@ -47,7 +77,7 @@
           <article class="slide">
             <img src="idm2.JPG" alt="IDM Berlim 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag international">Competição internacional</span>
               <h2>IDM Berlim 2026</h2>
               <p>Maio 2026 · Berlim</p>
             </div>
@@ -56,7 +86,7 @@
           <article class="slide">
             <img src="idm3.JPG" alt="IDM Berlim 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag international">Competição internacional</span>
               <h2>IDM Berlim 2026</h2>
               <p>Maio 2026 · Berlim</p>
             </div>
@@ -65,7 +95,7 @@
           <article class="slide">
             <img src="idm4.JPG" alt="IDM Berlim 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag international">Competição internacional</span>
               <h2>IDM Berlim 2026</h2>
               <p>Maio 2026 · Berlim</p>
             </div>
@@ -74,17 +104,16 @@
           <article class="slide">
             <img src="idm5.JPG" alt="IDM Berlim 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag international">Competição internacional</span>
               <h2>IDM Berlim 2026</h2>
               <p>Maio 2026 · Berlim</p>
             </div>
           </article>
 
-          
           <article class="slide">
             <img src="gala26.JPG" alt="Atleta do Ano 2025 em Santo Tirso">
             <div class="slide-caption">
-              <span class="slide-tag">Reconhecimento</span>
+              <span class="slide-tag gold">Reconhecimento</span>
               <h2>Atleta do Ano 2025</h2>
               <p>Abril 2026 · Santo Tirso</p>
             </div>
@@ -93,7 +122,7 @@
           <article class="slide">
             <img src="porto_26.jpg" alt="Troféu Cidade do Porto 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Competição</span>
+              <span class="slide-tag gold">Destaque</span>
               <h2>Troféu Cidade do Porto 2026</h2>
               <p>Março 2026 · Porto</p>
             </div>
@@ -102,7 +131,7 @@
           <article class="slide">
             <img src="nacional_26.JPG" alt="Campeonato Nacional de Inverno 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Nacional</span>
+              <span class="slide-tag national">Nacional</span>
               <h2>Campeonato Nacional de Inverno</h2>
               <p>Março 2026 · Vila Franca de Xira</p>
             </div>
@@ -111,7 +140,7 @@
           <article class="slide">
             <img src="pt.JPG" alt="Torneio Nacional 2026">
             <div class="slide-caption">
-              <span class="slide-tag">Pódio</span>
+              <span class="slide-tag podium">Pódio</span>
               <h2>Torneio Nacional 2026</h2>
               <p>Janeiro 2026 · Ponte de Sor</p>
             </div>
@@ -120,25 +149,25 @@
           <article class="slide">
             <img src="equipa.jpg" alt="Campeonato Nacional de Verão 2025 com a equipa">
             <div class="slide-caption">
-              <span class="slide-tag">Equipa</span>
+              <span class="slide-tag team">Equipa</span>
               <h2>Campeonato Nacional de Verão 2025</h2>
               <p>Junho 2025 · Rio Maior</p>
             </div>
           </article>
 
           <article class="slide">
-            <img src="fuji_7.jpg" alt="World Para Swimming Series Fuji–Shizuoka">
+            <img src="fuji_7.jpg" alt="World Para Swimming Series Fuji-Shizuoka">
             <div class="slide-caption">
-              <span class="slide-tag">Internacional</span>
+              <span class="slide-tag international">Internacional</span>
               <h2>World Para Swimming Series</h2>
-              <p>Abril 2025 · Fuji–Shizuoka</p>
+              <p>Abril 2025 · Fuji-Shizuoka</p>
             </div>
           </article>
 
           <article class="slide">
             <img src="gala25.JPG" alt="Atleta do Ano 2024 em Santo Tirso">
             <div class="slide-caption">
-              <span class="slide-tag">Reconhecimento</span>
+              <span class="slide-tag gold">Reconhecimento</span>
               <h2>Atleta do Ano 2024</h2>
               <p>Março 2025 · Santo Tirso</p>
             </div>
@@ -152,11 +181,81 @@
       </div>
     </div>
   </section>
+
+  <!-- MOMENTOS -->
+  <section class="moments-section" id="momentos">
+    <div class="container">
+      <div class="section-heading light">
+        <p class="eyebrow">Percurso em imagens</p>
+        <h2>Momentos marcantes</h2>
+      </div>
+
+      <div class="moments-grid">
+
+        <article class="moment-card large">
+          <img src="idm1.JPG" alt="IDM Berlin 2026">
+          <div class="moment-overlay">
+            <span>Internacional</span>
+            <h3>IDM Berlin 2026</h3>
+          </div>
+        </article>
+
+        <article class="moment-card">
+          <img src="gala26.JPG" alt="Atleta do Ano 2025">
+          <div class="moment-overlay">
+            <span>Reconhecimento</span>
+            <h3>Atleta do Ano 2025</h3>
+          </div>
+        </article>
+
+        <article class="moment-card">
+          <img src="porto_26.jpg" alt="Troféu Cidade do Porto">
+          <div class="moment-overlay">
+            <span>Destaque</span>
+            <h3>Troféu Cidade do Porto</h3>
+          </div>
+        </article>
+
+        <article class="moment-card">
+          <img src="fuji_7.jpg" alt="Fuji Shizuoka">
+          <div class="moment-overlay">
+            <span>Portugal</span>
+            <h3>Fuji-Shizuoka</h3>
+          </div>
+        </article>
+
+        <article class="moment-card">
+          <img src="equipa.jpg" alt="Equipa">
+          <div class="moment-overlay">
+            <span>Equipa</span>
+            <h3>Campeonato Nacional</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Mais do que fotografias, memórias de um percurso.</h2>
+      <p>
+        Cada imagem representa trabalho, pessoas, viagens, competição, adaptação e evolução.
+      </p>
+
+      <div class="cta-actions">
+        <a href="media.html" class="btn-primary">Ver media</a>
+        <a href="palmares2.html" class="btn-glass-dark">Ver palmarés</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 Alexandre Couto. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Alexandre Couto. Todos os direitos reservados.</p>
   </div>
 </footer>
 
@@ -189,8 +288,13 @@
     dots[current].classList.add('active');
   }
 
-  function nextSlide() { showSlide(current + 1); }
-  function prevSlide() { showSlide(current - 1); }
+  function nextSlide() {
+    showSlide(current + 1);
+  }
+
+  function prevSlide() {
+    showSlide(current - 1);
+  }
 
   function startAuto() {
     timer = setInterval(nextSlide, 5000);
@@ -201,10 +305,18 @@
     startAuto();
   }
 
-  nextBtn.addEventListener('click', () => { nextSlide(); restartAuto(); });
-  prevBtn.addEventListener('click', () => { prevSlide(); restartAuto(); });
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    restartAuto();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    restartAuto();
+  });
 
   startAuto();
 </script>
+
 </body>
 </html>
